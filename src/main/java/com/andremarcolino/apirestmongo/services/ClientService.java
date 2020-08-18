@@ -30,6 +30,19 @@ public class ClientService {
 		return repo.insert(obj);
 	}
 	
+	public Client update(Client obj) {
+		Client newObj = findById(obj.getId());
+		updateData(newObj, obj);
+		return repo.save(newObj);
+	}
+	
+	private void updateData(Client newObj, Client obj) {
+		newObj.setName(obj.getName());
+		newObj.setCpf(obj.getCpf());
+		newObj.setAddress(obj.getAddress());
+		
+	}
+
 	public void delete(String id) {
 		findById(id);
 		repo.deleteById(id);
