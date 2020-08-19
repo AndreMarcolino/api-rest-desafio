@@ -18,7 +18,7 @@ import com.andremarcolino.apirestmongo.dto.ClientDTO;
 import com.andremarcolino.apirestmongo.services.ClientService;
 
 @RestController
-@RequestMapping(value="/clients")
+@RequestMapping(value="/clientes")
 public class ClientResource {
 	
 	@Autowired
